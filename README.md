@@ -1,4 +1,4 @@
-# El-Pos (el-pos)
+# LuxePoS (luxepos)
 
 A Quasar Project
 
