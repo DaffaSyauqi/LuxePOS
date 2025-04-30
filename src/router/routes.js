@@ -1,18 +1,168 @@
 const routes = [
   {
     path: '/',
-    component: () => import('layouts/MainLayout.vue'),
+    component: () => import('layouts/NavbarLayout.vue'),
+    children: [{ path: '', component: () => import('pages/IndexPage.vue') }],
+  },
+  { path: '/login', component: () => import('pages/LoginPage.vue') },
+  { path: '/register', component: () => import('pages/RegisterPage.vue') },
+  { path: '/choose-role', component: () => import('pages/ChooseRolePage.vue') },
+  { path: '/form-kasir', component: () => import('pages/FormKasirPage.vue') },
+  { path: '/form-admin', component: () => import('pages/FormAdminPage.vue') },
+
+  {
+    path: '/superadmin',
+    component: () => import('layouts/SidebarLayout.vue'),
+    meta: { requiresAuth: true },
     children: [
-      { path: '', component: () => import('pages/IndexPage.vue') }
-    ]
+      { path: 'dashboard', component: () => import('pages/superadmin/DashboardPage.vue') },
+      { path: 'pos', component: () => import('pages/superadmin/PosPage.vue') },
+      { path: 'transaction', component: () => import('pages/superadmin/TransactionPage.vue') },
+      { path: 'report', component: () => import('pages/superadmin/ReportPage.vue') },
+      { path: 'supplier', component: () => import('pages/superadmin/SupplierPage.vue') },
+      { path: 'product', component: () => import('pages/superadmin/ProductPage.vue') },
+      { path: 'category', component: () => import('pages/superadmin/CategoryPage.vue') },
+      { path: 'user', component: () => import('pages/superadmin/UserPage.vue') },
+      { path: 'role', component: () => import('pages/superadmin/RolePage.vue') },
+      {
+        path: 'permission/:id',
+        component: () => import('pages/superadmin/PermissionPage.vue'),
+        props: true,
+      },
+      {
+        path: 'confirm-cashier',
+        component: () => import('pages/superadmin/ConfirmCashierRequest.vue'),
+      },
+      { path: 'setting', component: () => import('pages/superadmin/SettingPage.vue') },
+      { path: 'addsupplier', component: () => import('pages/superadmin/AddSupplier.vue') },
+      { path: 'addproduct', component: () => import('pages/superadmin/AddProduct.vue') },
+      { path: 'addcategory', component: () => import('pages/superadmin/AddCategory.vue') },
+      { path: 'adduser', component: () => import('pages/superadmin/AddUser.vue') },
+      { path: 'addrole', component: () => import('pages/superadmin/AddRole.vue') },
+      {
+        path: 'editsupplier/:id',
+        component: () => import('pages/superadmin/EditSupplier.vue'),
+        props: true,
+      },
+      {
+        path: 'editproduct/:id',
+        component: () => import('pages/superadmin/EditProduct.vue'),
+        props: true,
+      },
+      {
+        path: 'editcategory/:id',
+        component: () => import('pages/superadmin/EditCategory.vue'),
+        props: true,
+      },
+      {
+        path: 'edituser/:id',
+        component: () => import('pages/superadmin/EditUser.vue'),
+        props: true,
+      },
+    ],
   },
 
-  // Always leave this as last one,
-  // but you can also remove it
+  {
+    path: '/admin',
+    component: () => import('layouts/SidebarLayout.vue'),
+    meta: { requiresAuth: true },
+    children: [
+      { path: 'dashboard', component: () => import('pages/admin/DashboardPage.vue') },
+      { path: 'pos', component: () => import('pages/admin/PosPage.vue') },
+      { path: 'transaction', component: () => import('pages/admin/TransactionPage.vue') },
+      { path: 'report', component: () => import('pages/admin/ReportPage.vue') },
+      { path: 'supplier', component: () => import('pages/admin/SupplierPage.vue') },
+      { path: 'product', component: () => import('pages/admin/ProductPage.vue') },
+      { path: 'category', component: () => import('pages/admin/CategoryPage.vue') },
+      { path: 'user', component: () => import('pages/admin/UserPage.vue') },
+      // { path: 'role', component: () => import('pages/admin/RolePage.vue') },
+      // {
+      //   path: 'permission/:id',
+      //   component: () => import('pages/admin/PermissionPage.vue'),
+      //   props: true,
+      // },
+      { path: 'confirm-cashier', component: () => import('pages/admin/ConfirmCashierRequest.vue') },
+      { path: 'setting', component: () => import('pages/admin/SettingPage.vue') },
+      { path: 'addsupplier', component: () => import('pages/admin/AddSupplier.vue') },
+      { path: 'addproduct', component: () => import('pages/admin/AddProduct.vue') },
+      { path: 'addcategory', component: () => import('pages/admin/AddCategory.vue') },
+      // { path: 'adduser', component: () => import('pages/admin/AddUser.vue') },
+      // { path: 'addrole', component: () => import('pages/admin/AddRole.vue') },
+      {
+        path: 'editsupplier/:id',
+        component: () => import('pages/admin/EditSupplier.vue'),
+        props: true,
+      },
+      {
+        path: 'editproduct/:id',
+        component: () => import('pages/admin/EditProduct.vue'),
+        props: true,
+      },
+      {
+        path: 'editcategory/:id',
+        component: () => import('pages/admin/EditCategory.vue'),
+        props: true,
+      },
+      // {
+      //   path: 'edituser/:id',
+      //   component: () => import('pages/admin/EditUser.vue'),
+      //   props: true,
+      // },
+    ],
+  },
+
+  {
+    path: '/kasir',
+    component: () => import('layouts/SidebarLayout.vue'),
+    meta: { requiresAuth: true },
+    children: [
+      { path: 'dashboard', component: () => import('pages/kasir/DashboardPage.vue') },
+      { path: 'pos', component: () => import('pages/kasir/PosPage.vue') },
+      { path: 'transaction', component: () => import('pages/kasir/TransactionPage.vue') },
+      // { path: 'supplier', component: () => import('pages/kasir/SupplierPage.vue') },
+      // { path: 'product', component: () => import('pages/kasir/ProductPage.vue') },
+      // { path: 'category', component: () => import('pages/kasir/CategoryPage.vue') },
+      // { path: 'user', component: () => import('pages/kasir/UserPage.vue') },
+      // { path: 'role', component: () => import('pages/kasir/RolePage.vue') },
+      // {
+      //   path: 'permission/:id',
+      //   component: () => import('pages/kasir/PermissionPage.vue'),
+      //   props: true,
+      // },
+      // { path: 'report', component: () => import('pages/kasir/ReportPage.vue') },
+      { path: 'setting', component: () => import('pages/kasir/SettingPage.vue') },
+      // { path: 'addsupplier', component: () => import('pages/kasir/AddSupplier.vue') },
+      // { path: 'addproduct', component: () => import('pages/kasir/AddProduct.vue') },
+      // { path: 'addcategory', component: () => import('pages/kasir/AddCategory.vue') },
+      // { path: 'adduser', component: () => import('pages/kasir/AddUser.vue') },
+      // { path: 'addrole', component: () => import('pages/kasir/AddRole.vue') },
+      // {
+      //   path: 'editsupplier/:id',
+      //   component: () => import('pages/kasir/EditSupplier.vue'),
+      //   props: true,
+      // },
+      // {
+      //   path: 'editproduct/:id',
+      //   component: () => import('pages/kasir/EditProduct.vue'),
+      //   props: true,
+      // },
+      // {
+      //   path: 'editcategory/:id',
+      //   component: () => import('pages/kasir/EditCategory.vue'),
+      //   props: true,
+      // },
+      // {
+      //   path: 'edituser/:id',
+      //   component: () => import('pages/kasir/EditUser.vue'),
+      //   props: true,
+      // },
+    ],
+  },
+
   {
     path: '/:catchAll(.*)*',
-    component: () => import('pages/ErrorNotFound.vue')
-  }
+    component: () => import('pages/ErrorNotFound.vue'),
+  },
 ]
 
 export default routes

@@ -1,1 +1,330 @@
-// app global css in SCSS form
+$light-background: #ffffff;
+$light-text: #333333;
+$dark-background: #0b1727;
+$dark-text: #ffffff;
+
+body {
+  background-color: $light-background;
+  color: $light-text;
+  // transition:
+  //   background-color 0.1s,
+  //   color 0.1s;
+}
+
+body.body--dark {
+  background-color: $dark-background;
+  color: $dark-text;
+}
+
+// .q-header,
+// .q-drawer {
+//   // transition:
+//   //   background-color 0.1s,
+//   //   color 0.1s;
+// }
+
+.body--dark .q-toolbar {
+  background-color: $dark-background;
+}
+
+.body--dark .q-drawer {
+  background-color: $dark-background;
+  color: $dark-text;
+}
+
+.body--dark .logo-text {
+  color: $dark-text;
+}
+
+body .q-header .q-btn {
+  .q-icon {
+    color: $light-text;
+  }
+}
+
+body.body--dark .q-header .q-btn {
+  .q-icon {
+    color: $dark-text;
+  }
+}
+
+body.body--dark .q-table {
+  background-color: $dark-background;
+  color: $dark-text;
+  border-color: #ffffff;
+  border: 1px solid #333;
+}
+
+.body--dark .q-table__top {
+  background-color: $dark-background;
+  color: $dark-text;
+  border: 1px solid #333;
+}
+
+.body--dark .q-table__bottom {
+  background-color: $dark-background;
+  color: $dark-text;
+  border: 1px solid #333;
+}
+
+.body--dark .q-card {
+  background-color: $dark-background;
+  color: white;
+}
+
+.body--dark .q-input {
+  background-color: $light-background;
+  color: black;
+  border-radius: 5px;
+}
+
+.body--dark .q-input-rounded {
+  background-color: $light-background;
+  color: black;
+  border-radius: 20px;
+}
+
+.navbar-transparent {
+  background-color: transparent !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+/* Hero section */
+.landing-hero {
+  height: 100vh;
+  background-image: url('/src/assets/background.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding: 2rem;
+}
+
+.fitur-image {
+  width: 600px;
+  max-width: 90%;
+  margin-top: 20px;
+}
+
+.content {
+  z-index: 2;
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Reusable section styles */
+.section-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* About section */
+.about-luxepos {
+  height: 100vh;
+  background-color: #fff;
+  color: #000;
+}
+
+.fitur-list {
+  list-style: none;
+  padding: 0;
+  line-height: 1.8;
+}
+
+.fitur-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.leaf-decoration {
+  position: absolute;
+  top: 10px;
+  right: -48px;
+  width: 130px;
+  z-index: 1;
+}
+
+.shop-illustration {
+  position: relative;
+  top: 100px;
+  width: 100%;
+  right: -48px;
+  max-width: 500px;
+  z-index: 2;
+}
+
+/* Contact section */
+.kontak-kami {
+  height: 100vh;
+  background-color: #fff;
+  color: #333;
+}
+
+.kontak-text {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .fitur-image {
+    width: 80%;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+
+  .kontak-text {
+    font-size: 1.2rem;
+  }
+
+  .kontak-kami .q-col-gutter-xl {
+    gap: 16px;
+  }
+
+  .leaf-decoration {
+    width: 100px;
+  }
+
+  .shop-illustration {
+    width: 90%;
+  }
+}
+
+.full-width {
+  width: 100%;
+}
+
+.text-center p,
+.text-center h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.checkbox-wrapper {
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+.header-toolbar {
+  background-color: white;
+  height: 80px;
+  // transition: background-color 0.1s;
+}
+
+.sidebar-drawer {
+  transition: background-color 0.3s;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  padding: 7px;
+}
+
+.logo-img {
+  height: 50px;
+}
+
+.logo-text {
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+}
+
+.q-expansion-item__header {
+  padding: 10px 16px;
+}
+
+.q-item {
+  padding-left: 24px;
+}
+
+.hover-bg-primary:hover {
+  background-color: $primary;
+  color: $positive;
+  border-radius: 8px;
+}
+
+.bg-primary.text-positive {
+  background-color: $primary;
+  color: $positive;
+  border-radius: 8px;
+}
+
+.bg-primary {
+  border-radius: 8px;
+}
+
+.bg-secondary {
+  border-radius: 8px;
+}
+
+.bg-dark {
+  border-radius: 8px;
+}
+
+.custom-label {
+  display: flex;
+  align-items: center;
+}
+
+.custom-gap .q-btn {
+  margin-right: 10px;
+}
+.custom-gap .q-btn:last-child {
+  margin-right: 0;
+}
