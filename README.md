@@ -23,7 +23,6 @@ Aplikasi ini dirancang untuk memberikan antarmuka yang cepat, responsif, dan mud
 - [Vue 3](https://vuejs.org/)
 - [Pinia](https://pinia.vuejs.org/)
 - [Axios](https://axios-http.com/)
-- [TypeScript](https://www.typescriptlang.org/)
 
 ### Backend:
 - [Node.js](https://nodejs.org/)
