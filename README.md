@@ -33,37 +33,6 @@ Aplikasi ini dirancang untuk memberikan antarmuka yang cepat, responsif, dan mud
 
 ---
 
-### 1️⃣ Clone Repository
-```bash
-git clone https://github.com/DaffaSyauqi/luxepos.git
-cd luxepos
-```
-
-### 2️⃣ Instal Dependensi
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-```
-
-### 3️⃣ Konfigurasi Environment Variable
-Buat file .env di direktori utama proyek dan isi variabel berikut sesuai kebutuhan:
-```bash
-DATABASE_URL=postgres://user:password@localhost:5432/luxepos
-JWT_SECRET=jwt_secret_kamu
-```
-
-### 4️⃣ Jalankan Server Development
-```bash
-quasar dev
-```
----
-
 ## 🧱 Struktur Folder
 ```bash
 luxepos/
@@ -86,4 +55,36 @@ luxepos/
 └── package.json
 ```
 
+---
 
+## 🔧 Instalasi
+### 1️⃣ Clone Repository
+```bash
+git clone https://github.com/DaffaSyauqi/luxepos.git
+cd luxepos
+```
+
+### 2️⃣ Instal Dependensi
+```bash
+# npm
+npm install
+
+# pnpm
+pnpm install
+
+# yarn
+yarn install
+```
+
+### 3️⃣ Konfigurasi Environment Variable
+Buat file .env di direktori utama proyek dan isi variabel berikut sesuai kebutuhan:
+```bash
+DATABASE_URL=database_url_kamu
+JWT_SECRET=jwt_secret_kamu
+```
+
+### 4️⃣ Jalankan Server Development
+```bash
+quasar dev
+```
+---
