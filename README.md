@@ -1,23 +1,23 @@
-# 💼 LuxePOS — Aplikasi Web Point of Sales (Quasar SSR)
+# LuxePOS — Aplikasi Web Point of Sales (Quasar SSR)
 
 **LuxePOS** adalah aplikasi web Point of Sales (POS) modern yang dibangun menggunakan **Quasar Framework (mode SSR)** dengan dukungan **Node.js**, **Express**, dan **PostgreSQL**.  
 Aplikasi ini dirancang untuk memberikan antarmuka yang cepat, responsif, dan mudah digunakan dalam mengelola penjualan, produk, kategori, serta sistem role dan permission di lingkungan toko.
 
 ---
 
-## 🚀 Fitur Utama
-- 🧾 Sistem POS lengkap menggunakan **Quasar SSR**
-- 📦 Manajemen produk & kategori (tambah, edit, hapus)
-- 🖼️ Upload dan manajemen gambar produk
-- 🏪 Registrasi toko untuk admin baru
-- 👤 Autentikasi pengguna dengan sistem role (admin, kasir)
-- 🖨️ Fitur cetak faktur / struk penjualan
-- 🗃️ Backend menggunakan **Express.js** dan **Sequelize ORM**
-- 🗄️ Dukungan database **PostgreSQL**
+## Fitur Utama
+- Sistem POS lengkap menggunakan **Quasar SSR**
+- Manajemen produk & kategori (tambah, edit, hapus)
+- Upload dan manajemen gambar produk
+- Registrasi toko untuk admin baru
+- Autentikasi pengguna dengan sistem role (admin, kasir)
+- Fitur cetak faktur / struk penjualan
+- Backend menggunakan **Express.js** dan **Sequelize ORM**
+- Dukungan database **PostgreSQL**
 
 ---
 
-## 🧩 Teknologi yang Digunakan
+## Teknologi yang Digunakan
 ### Frontend:
 - [Quasar Framework (SSR Mode)](https://quasar.dev/)
 - [Vue 3](https://vuejs.org/)
@@ -33,7 +33,7 @@ Aplikasi ini dirancang untuk memberikan antarmuka yang cepat, responsif, dan mud
 
 ---
 
-## 🧱 Struktur Folder
+## Struktur Folder
 ```bash
 luxepos/
 ├── src/
@@ -57,14 +57,14 @@ luxepos/
 
 ---
 
-## 🔧 Instalasi
-### 1️⃣ Clone Repository
+## Instalasi
+### 1. Clone Repository
 ```bash
 git clone https://github.com/DaffaSyauqi/luxepos.git
 cd luxepos
 ```
 
-### 2️⃣ Instal Dependensi
+### 2. Instal Dependensi
 ```bash
 # npm
 npm install
@@ -76,14 +76,14 @@ pnpm install
 yarn install
 ```
 
-### 3️⃣ Konfigurasi Environment Variable
+### 3. Konfigurasi Environment Variable
 Buat file .env di direktori utama proyek dan isi variabel berikut sesuai kebutuhan:
 ```bash
 DATABASE_URL=database_url_kamu
 JWT_SECRET=jwt_secret_kamu
 ```
 
-### 4️⃣ Jalankan Server Development
+### 4. Jalankan Server Development
 ```bash
 quasar dev
 ```
